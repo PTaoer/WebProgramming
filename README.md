@@ -15,9 +15,18 @@ Web程序设计大作业
 界面设计：
 ----
 1.首页<br> 
+![](https://github.com/PTaoer/WebProgramming/raw/master/doc/readme/1.jpg)<br>
 2.分类<br>
+![](https://github.com/PTaoer/WebProgramming/raw/master/doc/readme/2.jpg)<br>
 3.购物车<br>
+![](https://github.com/PTaoer/WebProgramming/raw/master/doc/readme/3.jpg)<br>
 4.我的<br>
+![](https://github.com/PTaoer/WebProgramming/raw/master/doc/readme/4.jpg)<br>
+5.其他<br>
+![](https://github.com/PTaoer/WebProgramming/raw/master/doc/readme/5.jpg)<br>
+![](https://github.com/PTaoer/WebProgramming/raw/master/doc/readme/6.jpg)<br>
+![](https://github.com/PTaoer/WebProgramming/raw/master/doc/readme/7.jpg)<br>
+![](https://github.com/PTaoer/WebProgramming/raw/master/doc/readme/8.jpg)<br>
 
 数据结构：
 ----
