@@ -1,0 +1,119 @@
+<view class='header'>
+  <view class='button chosenyes'>全部（4477）</view>
+  <view class='button chosenno'>好评（4477）</view>
+  <view class='button chosenno'>中评（4477）</view>
+  <view class='button chosenno'>差评（4477）</view>
+  <view class='button chosenno'>晒图（4477）</view>
+</view>
+<view class='body_every'>
+  <view class='user left top'>
+    <image class='user_img' src='http://47.100.44.255/images/user/100_1.jpg'></image>
+    <text class='text phone_head left'>1391</text>
+    <text class='text phone_cannotsee'>****</text>
+    <text class='text phone_tail'>367</text>
+  </view>
+  <view class='star_comment left' style='margin-top:10rpx'>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+  </view>
+  <view class='context_text left top'>好评</view>
+</view>
+<view class='body_every'>
+  <view class='user left top'>
+    <image class='user_img' src='http://47.100.44.255/images/user/100_2.jpg'></image>
+    <text class='text phone_head left'>1391</text>
+    <text class='text phone_cannotsee'>****</text>
+    <text class='text phone_tail'>367</text>
+  </view>
+  <view class='star_comment left' style='margin-top:10rpx'>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+  </view>
+  <view class='context_text left top'>好评</view>
+</view>
+<view class='body_every'>
+  <view class='user left top'>
+    <image class='user_img' src='http://47.100.44.255/images/user/100_3.jpg'></image>
+    <text class='text phone_head left'>1391</text>
+    <text class='text phone_cannotsee'>****</text>
+    <text class='text phone_tail'>367</text>
+  </view>
+  <view class='star_comment left' style='margin-top:10rpx'>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+  </view>
+  <view class='context_text left top'>好评</view>
+</view>
+<view class='body_every'>
+  <view class='user left top'>
+    <image class='user_img' src='http://47.100.44.255/images/user/100_4.jpg'></image>
+    <text class='text phone_head left'>1391</text>
+    <text class='text phone_cannotsee'>****</text>
+    <text class='text phone_tail'>367</text>
+  </view>
+  <view class='star_comment left' style='margin-top:10rpx'>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+  </view>
+  <view class='context_text left top'>好评</view>
+</view>
+<view class='body_every'>
+  <view class='user left top'>
+    <image class='user_img' src='http://47.100.44.255/images/user/100_5.jpg'></image>
+    <text class='text phone_head left'>1391</text>
+    <text class='text phone_cannotsee'>****</text>
+    <text class='text phone_tail'>367</text>
+  </view>
+  <view class='star_comment left' style='margin-top:10rpx'>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+  </view>
+  <view class='context_text left top'>好评</view>
+</view>
+<view class='body_every'>
+  <view class='user left top'>
+    <image class='user_img' src='http://47.100.44.255/images/user/100_6.jpg'></image>
+    <text class='text phone_head left'>1391</text>
+    <text class='text phone_cannotsee'>****</text>
+    <text class='text phone_tail'>367</text>
+  </view>
+  <view class='star_comment left' style='margin-top:10rpx'>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+  </view>
+  <view class='context_text left top'>好评</view>
+</view>
+<view class='body_every'>
+  <view class='user left top'>
+    <image class='user_img' src='http://47.100.44.255/images/user/100_7.jpg'></image>
+    <text class='text phone_head left'>1391</text>
+    <text class='text phone_cannotsee'>****</text>
+    <text class='text phone_tail'>367</text>
+  </view>
+  <view class='star_comment left' style='margin-top:10rpx'>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+    <icon class='iconfont icon-xingxing' style='color:rgb(255, 82, 0); margin-right:10rpx'></icon>
+  </view>
+  <view class='context_text left top'>好评</view>
+</view>

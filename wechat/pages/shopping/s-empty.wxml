@@ -1,0 +1,11 @@
+<!--logs.wxml-->
+<view class="container">
+<view class="spempty">
+<view class="iconfont icon-shouye gwc"></view> 
+<view class='spempty-text'> 
+这里什么也没有哦，快去商城逛逛吧~
+</view>
+
+</view>
+
+</view>

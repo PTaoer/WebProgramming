@@ -1,0 +1,10 @@
+@import "../../../modules/chat-input/chat-input.wxss";
+page {
+    background-color: #EFEFEF;
+}
+.service {
+  height: 60px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 60px;
+}

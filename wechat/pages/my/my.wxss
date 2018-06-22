@@ -1,0 +1,101 @@
+/**index.wxss**/
+.userinfo {
+  height: 120px;
+  width: 100%;
+  /*background-color: #FDD692;*/
+  display: flex;
+  background-image: url('http://img4.imgtn.bdimg.com/it/u=3338154111,1926209614&fm=27&gp=0.jpg');
+  flex-direction: column;
+  align-items: center;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 45rpx;
+  margin-bottom: 5px;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #754F44;
+  font-size: 15px;
+}
+
+.order{
+  margin-top: 10px;
+  width: 100%;
+  height: 130px;
+  background-color: rgb(248, 248, 248);
+  font-size: 14px;
+}
+.top{
+  width: 95%;
+  height: 30px;
+  margin-left: 8px;
+  border-bottom: 1px solid #ccc;
+  line-height: 30px;
+}
+.o{
+  position: absolute;
+  right: 10px;
+}
+.bottom{
+  display: flex;
+  flex-direction: row;
+}
+.b1{
+  width:25%;
+  height:100px;
+  border-right: 1px solid #ccc;
+  text-align: center;
+  line-height: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.information{
+  margin-top:10px;
+  width: 100%;
+  height: 60px;
+  background-color: rgb(248, 248, 248);
+  font-size: 14px;
+}
+.i{
+  width: 95%;
+  margin-left: 8px;
+  height: 30px;
+  line-height: 30px;
+}
+.i1{
+  position: absolute;
+  right: 10px;
+}
+
+.custom{
+  width:100%;
+  height:30px;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 30px;
+  background-color: rgb(248, 248, 248);
+}
+
+/*底“零拾实验室”*/
+.usermotto {
+  margin-top: 50px;
+  text-align: center;
+  width:100%;
+  color: #754F44;
+  
+}
+
+.reddot {
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50%;
+    background: #FF4040;
+    text-align: center;
+    line-height: 50rpx;
+    color: white;
+    margin-left: 55%;
+    margin-top: 20%;
+}

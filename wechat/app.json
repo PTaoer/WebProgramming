@@ -1,0 +1,87 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/classify/classify",
+    "pages/shopping/shopping",
+    "pages/my/my",
+    "pages/logs/logs",
+
+    "pages/display/display-danhuangsu/display",
+    "pages/display/display-bingqilin/display",
+    "pages/display/display-shupian/display",
+    "pages/display/display-youzicha/display",
+    "pages/display/display-yaoguo/display",
+    "pages/display/display-xianggan/display",
+    "pages/display/display-xiangchang/display",
+    "pages/display/display-wucanrou/display",
+    "pages/display/display-ruantang/display",
+    "pages/display/display-niunai/display",
+    "pages/display/display-mangguogan/display",
+    "pages/display/display-luoshifen/display",
+    "pages/display/display-guihuagao/display",
+    "pages/display/display-fenglisu/display",
+    "pages/display/display-fangbianmian/display",
+    "pages/display/display-dabaitu/display",
+    "pages/display/display-bigenguo/display",
+    "pages/display/display-tizijiaxin/display",
+    "pages/display/display-binggun/display",
+
+    "pages/user/order/order",
+    "pages/user/nopay/nopay",
+    "pages/user/send/send",
+    "pages/user/delivered/delivered",
+    "pages/user/noevaluate/noevaluate",
+    "pages/user/address/chooseAddre/chooseAddre",
+    "pages/user/address/newAddre/newAddre",
+    "pages/user/address/modifyAddre/modifyAddre",
+    "pages/user/service/service",
+    "pages/user/ticket/ticket",
+
+    "pages/null/null",
+    "pages/search/search",
+    "pages/comment/comment",
+    "pages/searchR/searchR",
+    "template/template"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "零拾实验室",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true
+
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#FF0000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/tabBar/首页.png",
+        "selectedIconPath": "/images/tabBar/首页 (1).png"
+      },
+      {
+        "pagePath": "pages/classify/classify",
+        "text": "分类",
+        "iconPath": "/images/tabBar/分类 (2).png",
+        "selectedIconPath": "/images/tabBar/分类 (1).png"
+      },
+      {
+        "pagePath": "pages/shopping/shopping",
+        "text": "购物车",
+        "iconPath": "/images/tabBar/购物车.png",
+        "selectedIconPath": "/images/tabBar/购物车 (1).png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/images/tabBar/我的.png",
+        "selectedIconPath": "/images/tabBar/我的 (1).png"
+      }
+    ]
+  }
+
+}
+
+

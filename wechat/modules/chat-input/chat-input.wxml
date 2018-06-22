@@ -1,0 +1,40 @@
+<import src="voice.wxml" />
+<import src="extra.wxml" />
+<template name="chat-input">
+  <scroll-view class="scrool-view" scroll-y="true" scroll-with-animation="true" scroll-into-view="{{scrolltop}}" enable-back-to-top="true">
+    <view class="chat-list">
+      <block wx:for="{{chatList}}" wx:key="time">
+        <view id="roll{{index + 1}}" class="chat-left" wx:if="{{item.orientation == 'l'}}">
+          <image class="avatar-img" src="http://47.100.44.255/images/chat/贝贝.png"></image>
+          <text>{{item.text}}</text>
+          <image class="avatar-img"></image>
+        </view>
+        <view id="roll{{index + 1}}" class="chat-right" wx:if="{{item.orientation == 'r'}}">
+          <image class="avatar-img"></image>
+          <text>{{item.text}}{{item.url}}</text>
+          <image class="avatar-img" src="{{userLogoUrl}}"></image>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+
+  <view class="input-flex-column">
+    <view class="input-text-voice-super">
+      <block wx:if="{{showVoicePart}}">
+        <image src="http://47.100.44.255/images/chat/voice/{{inputObj.inputStatus==='voice'?'keyboard':'voice'}}.png" class="extra-btn-style" bindtap="changeInputWayEvent" />
+        <block wx:if="{{inputObj.inputStatus==='voice'}}">
+          <template is="voice" data="{{voiceObj:inputObj.voiceObj}}" />
+        </block>
+      </block>
+      <input wx:if="{{inputObj.inputStatus==='text'}}" class="chat-input-style" style="margin-left:{{showVoicePart?0:16}}rpx;" maxlength="500" confirm-type="send" value="{{textMessage}}" bindconfirm="chatInputSendTextMessage"/>
+      <view hover-class="press-style-opacity">
+        <image class="extra-btn-style" src="http://47.100.44.255/images/chat/extra.png" catchtap="chatInputExtraClickEvent" />
+      </view>
+    </view>
+    <block wx:if="{{inputObj.extraObj.chatInputShowExtra}}">
+      <view class="list-divide-line" />
+      <template is="chat-extra-function-part" data="{{chat$input$extra$arr:inputObj.extraObj.chatInputExtraArr}}" />
+    </block>
+  </view>
+
+</template>

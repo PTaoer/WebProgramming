@@ -1,0 +1,96 @@
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style='height:{{imgheights[current]}}rpx'>
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" mode='scaleToFill' />
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class='introduce'>
+  <view class='name size90 family left toptwenty'>碧根果240g 每日坚果奶香口味零食美味</view>
+  <view class='price topthirty'>
+    <view class='price-now family left'>￥38.80</view>
+    <view class='price-original family left'>￥40.00</view>
+  </view>
+  <view class='number topthirty'>
+    <view class='numberword number-sold family left'>已售：10594</view>
+    <view class='numberword number-reserve family'>库存：3333</view>
+  </view>
+</view>
+
+<view class='special'>
+  <view class='special-every'>
+    <view class='title purple left family'>满减</view>
+    <view class='specification size80 left family'>最高立减10元</view>
+    <view class='hidden'></view>
+  </view>
+  <view class='special-every'>
+    <view class='title pink left family'>满赠</view>
+    <view class='specification size80 left family'>限时特惠</view>
+    <view class='hidden'></view>
+  </view>
+  <view class='special-every'>
+    <view class='title green left family'>换购</view>
+    <view class='specification size80 left family'>小程序专享换购</view>
+    <view class='hidden'></view>
+  </view>
+  <view class='special-every'>
+    <view class='title red left family'>特价</view>
+    <view class='specification size80 left family'>特惠专场，限量抢</view>
+    <view class='hidden'></view>
+  </view>
+</view>
+
+<view class='address'>
+  <view class='moveto left size80 family'>送至</view>
+  <icon class='iconfont icon-dizhiguanli left' style='color: rgb(255, 98, 0); padding-bottom: 15rpx;'></icon>
+  <view class='left20 size80 family province'>浙江省</view>
+  <view class='left20 size80 family city'>杭州市</view>
+  <view class='left20 size80 family block'>余杭区</view>
+  <view class='hidden'></view>
+  <icon class='iconfont icon-pingjia' style='color: rgb(163, 163, 163); padding-right:30rpx;' bindtap='bindAddressTap'></icon>
+</view>
+<view class='comment'>
+  <view class='comment-title left family'>商品评价（6528）</view>
+  <view class='hidden'></view>
+  <icon class='iconfont icon-pingjia' style='color: rgb(163, 163, 163); padding-right:30rpx;' bindtap='bindCommentTap'></icon>
+</view>
+<view class='pictures'>
+  <image class='picture' src='http://47.100.44.255/images/product/detail-bigenguo/04.png'></image>
+  <image class='picture' src='http://47.100.44.255/images/product/detail-bigenguo/05.png'></image>
+  <image class='picture' src='http://47.100.44.255/images/product/detail-bigenguo/06.png'></image>
+  <image class='picture' src='http://47.100.44.255/images/product/detail-bigenguo/07.png'></image>
+  <image class='picture' src='http://47.100.44.255/images/product/detail-bigenguo/08.png'></image>
+
+</view>
+<!-- 底部悬浮栏 -->
+<view class="display-nav">
+  <image bindtap="chatting" src="/../../images/displaytool/talk.png" />
+  <view class="line_nav"></view>
+  <image bindtap="addLike" src="{{isLike?'/../../images/displaytool/like.png':'/../../images/displaytool/donotlike.png'}}" />
+  <view class="line_nav"></view>
+  <image bindtap="toCar" src="/../images/displaytool/shoppingcar.png" />
+  <button class="button-tocar" bindtap="showModal" formType="submit">加入购物车</button>
+</view>
+
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}" style='display: flex; flex-direction: column;'>
+  <!--<view class='top'></view>-->
+  <view class='middle'>
+    <text style='margin-left: 40rpx; color: rgb(100, 100, 100)'>购买数量</text>
+    <view class='hidden'></view>
+    <!-- 主容器 -->
+    <view class="stepper">
+      <!-- 减号 -->
+      <text class="{{minusStatus}}" bindtap="bindMinus">-</text>
+      <!-- 数值 -->
+      <input type="number" bindchange="bindManual" value="{{num}}" />
+      <!-- 加号 -->
+      <text class="normal" bindtap="bindPlus">+</text>
+    </view>
+  </view>
+  <view class='bottom'>
+    <button class="button-tocar" formType="submit" style='background:rgb(76, 175, 80); height: 80%; margin-top: 5%;' bindtap="bindSubmitNum">加入购物车</button>
+    <button class="imme_buy" formType="submit" style='background:rgb(244, 67, 54); height: 80%; margin-top: 5%;' bindtap="toCar">立即购买</button>
+  </view>
+</view>

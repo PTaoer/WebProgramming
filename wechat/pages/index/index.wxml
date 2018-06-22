@@ -1,0 +1,53 @@
+<import src="../../wxSearchView/wxSearchView.wxml"/>
+<!--搜索框  -->
+<view class="weui-search-bar">
+  <view class="weui-search-bar__form">
+    <view class="weui-search-bar__box">
+      <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+      <input type="text" class="weui-search-bar__input"  disabled='true' placeholder="搜索入口" bindtap="wxSearchTab"/>
+    </view>
+  </view>
+</view>
+
+<view>{{ searchValue}}</view>
+<!--轮播图  -->
+<swiper indicator-dots="true" autoplay="auto" interval="3000" duration="300" style="height:500rpx;">
+  <block wx:for="{{imgUrls}}">
+  <navigator url="{{item.url}}">
+  <swiper-item>
+      <image src="{{item.image}}" class="slide-image" mode="scaleToFill" />
+  </swiper-item>
+  </navigator>
+  </block>
+</swiper>
+<!--轮播头条  -->
+<view class="news-wrap">
+<view class="news-left">
+<text class="news-font2">零拾</text>
+<text class="news-font1">新品</text>
+</view>
+<view class="news-right">
+<swiper vertical='true' indicator-dots="{{indicatorDots}}" autoplay="auto" interval="3000" duration="300" style="height:90rpx" display-multiple-items="2">
+<block wx:for="{{news}}">
+<swiper-item class="flex">
+<view class="iconfont icon-shengyin:before"></view>
+<navigator url="{{item.url}}">
+<view class="news-title">{{item.title}}</view>
+</navigator>
+</swiper-item>
+</block>
+</swiper>
+</view>
+</view>
+<!--商品推荐  -->
+<view class="goodsWrap">
+<block wx:for="{{goods}}">
+<view class="goodsBox">
+<navigator class="" url="{{item.url}}">
+<image src="{{item.image}}" class="goodsImage" mode="scaleToFill"/>
+<view class="proText" >{{item.pro}}</view>
+<view class="goodsPrice">{{item.price}}<view class="buyBox">立即购买 </view></view>
+</navigator>
+</view>
+</block>
+</view>
