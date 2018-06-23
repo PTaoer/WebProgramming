@@ -40,7 +40,6 @@
     "pages/null/null",
     "pages/search/search",
     "pages/comment/comment",
-    "pages/searchR/searchR",
     "template/template"
   ],
   "window":{
