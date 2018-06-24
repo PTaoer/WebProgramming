@@ -18,13 +18,12 @@
     </view>
 
 
-
     <!-- 收货地址部分 -->
     <view class="item">
       <text>所在区域</text>
       <view class="right">
         <picker name="addre" class="addre" value="{{addreValue}}" range="{{addreRange}}" bindchange="addrePickerBindchange">
-          {{addreRange[addreValue]}}
+          {{address}}
         </picker>
 
       </view>

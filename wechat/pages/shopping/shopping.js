@@ -1,230 +1,197 @@
-//var Temp = require('../../template/contract.js');
-/*const requestTask = wx.request({
-  url: 'http://119.29.18.249:8081/production', //仅为示例，并非真实的接口地址
-  data: {
-    x: '',
-    y: ''
-  },
-  header: {
-    'content-type': 'application/json'
-  },
-  success: function (res) {
-    console.log(res.data)
-  }
-})*/
-
+var app = getApp();
+var list = app.globalData.list;
+var num = app.globalData.num;
+var allSelect = app.globalData.allSelect;
+var count = app.globalData.count;
 Page({
-
   data: {
-    isAllSelect: false,
-    totalMoney: 0,
-    // 商品详情介绍
-    check: {
-
-      pic: "1",
-      name: "1",
-      id: 1,
-      price: 5,
-      isSelect: false,
-      isshow: false,
-      count: {
-        quantity: 1,
-        min: 1,
-        max: 20
-      },
-    },
-
-    carts: [
-      {
-        pic: "http://47.100.44.255/images/product/detail-xiangchang/01.JPG",
-        name: "双汇Q趣火腿肠大号 85g*20",
-        id: '16',
-        price: 37.90,
-        isSelect: false,
-        isshow: false,
-        count: {
-          quantity: 1,
-          min: 1,
-          max: 20
-        },
-      },
-      {
-        pic: "http://47.100.44.255/images/product/detail-shupian/01.JPG",
-        name: "澳洲 Natural Chip薯片175g",
-        id: 13,
-        price: 29.00,
-        isSelect: false,
-        isshow: false,
-        count: {
-          quantity: 1,
-          min: 1,
-          max: 20
-        },
-      },
-
-
-      {
-        pic: "http://47.100.44.255/images/product/detail-xianggan/01.JPG",
-        name: "香菇豆干小包装麻辣",
-        id: 17,
-        price: 19.80,
-        isSelect: false,
-        isshow: false,
-        count: {
-          quantity: 1,
-          min: 1,
-          max: 20
-        },
-      },
-
-
-      {
-        pic: "http://47.100.44.255/images/product/detail-bingjilin/01.JPG",
-        name: "法式香草冰淇淋大桶装",
-        id: 3,
-        price: 19.80,
-        isSelect: false,
-        isshow: false,
-        count: {
-          quantity: 1,
-          min: 1,
-          max: 20
-        },
-      },
-
-
-    ],
+    list: [],
+    allSelect: 'circle',
+    orderlist: [],
+    count: 0
   },
-
-  onLoad: function () {
-    this.getdata();
-  },
-
-  getdata: function () {
-    var that = this;
-    wx.request({
-      url: 'http://119.29.18.249:8080/production',
-      data: {
-        x: '',
-        y: ''
-      },
-      header: {
-        'content-type': 'application/json'
-      },
-      success: function (res) {
-        console.log(res.data);
-        /*  var length = res.data.length;
-          if (length == 0) {
-            url = './s-empty';
-          }
-          for (var index in res.data) {
-            that.data.check.id = res.data[index].production_id;
-            that.data.check.name = res.data[index].production_name;
-            that.data.check.price = res.data[index].production_pricenow;
-            that.data.check.pic = res.data[index].production_imgurls01;
-            that.data.carts = that.data.carts +','+ that.data.check;
-     
-            console.log(that.data.check);
-          }
-        
-          console.log(that.data.carts);*/
-      }
-    })
-  },
-
-
-  //勾选事件处理函数  
-  switchSelect: function (e) {
-    // 获取item项的id，和数组的下标值  
-    var Allprice = 0, i = 0;
-    let id = e.target.dataset.id,
-
-      index = parseInt(e.target.dataset.index);
-    this.data.carts[index].isSelect = !this.data.carts[index].isSelect;
-    //价钱统计
-    if (this.data.carts[index].isSelect) {
-      this.data.totalMoney = this.data.totalMoney + this.data.carts[index].price;
-    }
-    else {
-      this.data.totalMoney = this.data.totalMoney - this.data.carts[index].price;
-    }
-    //是否全选判断
-    for (i = 0; i < this.data.carts.length; i++) {
-      Allprice = Allprice + this.data.carts[i].price;
-    }
-    if (Allprice == this.data.totalMoney) {
-      this.data.isAllSelect = true;
-    }
-    else {
-      this.data.isAllSelect = false;
-    }
+  onLoad: function() {
+    var app = getApp();
     this.setData({
-      carts: this.data.carts,
-      totalMoney: this.data.totalMoney,
-      isAllSelect: this.data.isAllSelect,
+      list: app.globalData.list
     })
+    console.log(app.globalData.list);
+  },
+  //改变选框状态
+  change: function(e) {
+    var that = this
+    //得到下标
+    var index = e.currentTarget.dataset.index
+    //得到选中状态
+    var select = e.currentTarget.dataset.select
+
+    if (select == "circle") {
+      var stype = "success"
+    } else {
+      var stype = "circle"
+    }
+    //把新的值给新的数组
+    var newList = app.globalData.list
+    newList[index].select = stype
+    //把新的数组传给前台
+    that.setData({
+      list: newList
+    })
+    //调用计算数目方法
+    that.countNum()
+    //计算金额
+    that.count()
+  },
+  //加法
+  addtion: function(e) {
+    var that = this
+    //得到下标
+    var index = e.currentTarget.dataset.index
+    //得到点击的值
+    var num = e.currentTarget.dataset.num
+    //默认99件最多
+    if (num < 100) {
+      num++
+    }
+    //把新的值给新的数组
+    var newList = app.globalData.list
+    newList[index].num = num
+
+    //把新的数组传给前台
+    that.setData({
+      list: newList
+    })
+    //调用计算数目方法
+    that.countNum()
+    //计算金额
+    that.count()
+  },
+  //减法
+  subtraction: function(e) {
+    var app = getApp();
+    var that = this
+    //得到下标
+    var index = e.currentTarget.dataset.index
+    //得到点击的值
+    var num = e.currentTarget.dataset.num
+    //把新的值给新的数组
+    var newList = app.globalData.list
+    //当1件时，点击移除
+    if (num == 1) {
+      newList.splice(index, 1)
+    } else {
+      num--
+      newList[index].num = num
+    }
+
+    //把新的数组传给前台
+    that.setData({
+      list: newList
+    })
+    //调用计算数目方法
+    that.countNum()
+    //计算金额
+    that.count()
   },
   //全选
-  allSelect: function (e) {
-    //处理全选逻辑
-    let i = 0;
-    if (!this.data.isAllSelect) {
-      for (i = 0; i < this.data.carts.length; i++) {
-        this.data.carts[i].isSelect = true;
-        this.data.totalMoney = this.data.totalMoney + this.data.carts[i].price;
+  allSelect: function(e) {
+    var app = getApp();
+    //先判断现在选中没
+    var allSelect = e.currentTarget.dataset.select
+    var newList = app.globalData.list;
+    if (allSelect == "circle") {
+      //先把数组遍历一遍，然后改掉select值
+      for (var i = 0; i < newList.length; i++) {
+        newList[i].select = "success"
+      }
+      var select = "success"
+    } else {
+      for (var i = 0; i < newList.length; i++) {
+        newList[i].select = "circle"
+      }
+      var select = "circle"
+    }
+    var that = this
+    that.setData({
+      list: newList,
+      allSelect: select
+    })
+    //调用计算数目方法
+    that.countNum()
+    //计算金额
+    that.count()
+  },
+  //计算数量
+  countNum: function() {
+    var that = this
+    //遍历数组，把既选中的num加起来
+    var newList = app.globalData.list;
+    var allNum = 0
+    for (var i = 0; i < newList.length; i++) {
+      if (newList[i].select == "success") {
+        allNum += parseInt(newList[i].num)
       }
     }
-    else {
-      for (i = 0; i < this.data.carts.length; i++) {
-        this.data.carts[i].isSelect = false;
-      }
-      this.data.totalMoney = 0;
-    }
-    this.setData({
-      carts: this.data.carts,
-      isAllSelect: !this.data.isAllSelect,
-      totalMoney: this.data.totalMoney,
+    parseInt
+    console.log(allNum)
+    that.setData({
+      num: allNum
     })
   },
-  // 去结算
-  toBuy() {
-    wx.showToast({
-      title: '去结算',
-      icon: 'success',
-      duration: 3000
-    });
-    var chose = new Array(20);
-    var count = 0;
-    let i = 0;
-    for (i = 0; i < this.data.carts.length; i++) {
-      if (true == this.data.carts[i].isSelect) {
-        count++;
-        chose[i] = this.data.carts[i].id;
+  onShow: function() {
+    var app = getApp();
+    this.setData({
+      list: app.globalData.list,
+    })
+  },
+
+  //计算金额方法
+  count: function() {
+    var that = this
+    //思路和上面一致
+    //选中的订单，数量*价格加起来
+    var newList = app.globalData.list;
+    var newCount = 0
+    for (var i = 0; i < newList.length; i++) {
+      if (newList[i].select == "success") {
+        newCount += newList[i].num * newList[i].price
+      }
+    }
+    that.setData({
+      count: newCount.toFixed(2)
+    })
+  },
+  onHide: function(e) {
+    this.setData({
+      prolist: []
+    })
+
+  },
+  order: function(e) {
+    var that = this;
+    var newlist = app.globalData.list
+    for (var i = 0; i < newlist.length; i++) {
+      if (newlist[i].select == "success") {
+        that.data.orderlist.push(newlist[i]);
       }
     }
 
-    wx.request({
-      url: "http://119.29.18.249:8080/postorder",
-      data: {
-        userid: 1,
-        chose: chose,
-        length: count
-      },
-      header: {
-        'content-type': 'application/json'
-      },
-      success: function (res) {
-        console.log(res.data);
-      },
+    that.setData({
+      orderlist: that.data.orderlist
     })
-  },
-  //数量变化处理
-  handleQuantityChange(e) {
-    var componentId = e.componentId;
-    var quantity = e.quantity;
-    this.data.carts[componentId].count.quantity = quantity;
-    this.setData({
-      carts: this.data.carts,
-    });
+    console.log('list:', that.data.orderlist)
+    console.log('addr:', app.globalData.address['0'])
+    wx.navigateTo({
+      url: '../orderDetail/order?list=' + JSON.stringify(that.data.orderlist) + '&count=' + that.data.count + '&address=' + JSON.stringify(app.globalData.address['0']),
+      success: function(res) {
+        that.setData({
+          orderlist: []
+        })
+      }
+
+
+    })
+
   }
-});
+
+})

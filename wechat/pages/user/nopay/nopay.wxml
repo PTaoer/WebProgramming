@@ -1,13 +1,2 @@
 <!--pages/user/nopay.wxml-->
-<view class="container">
-  <view class='t'>
-    <image src='http://47.100.44.255/images/product/detail-shupian/02.JPG'></image>
-    <view class='v' bindtap='nopay'>
-      <view class='v-t'>澳洲 Natural Chip薯片175g</view>
-      <view class='v-b'>
-        <view class='v-b-1'>单价：29.00元</view> 
-        <view class='v-b-1'>数量：5包</view>
-      </view>
-    </view>
-  </view>
-</view>
+<text class="nullText">😭 暂时还没有喔~</text>

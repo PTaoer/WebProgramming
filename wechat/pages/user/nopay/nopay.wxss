@@ -1,37 +1,7 @@
 /* pages/user/nopay.wxss */
-.t{
-  width: 95%;
-  height: 100px;
-  margin-top: 10px;
-  margin-left: 6px;
-  border: 1px solid #ccc;
+.nullText{
+  margin-top:40%;
   display: flex;
-  background-color: ghostwhite;
-}
-image{
-  width: 100px;
-  height: 100px;
-}
-.v{
-  width: 80%;
-  height:100px;
-}
-.v-t{
-  margin-left: 10px;
-  font-size: 15px;
-  height: 60px;
-  line-height: 60px;
-}
-.v-b{
-  margin-left: 10px;
-  height: 40px;
-  color: #bbb;
-  font-size: 14px;
-  line-height: 40px;
-  display: flex;
-}
-.v-b-1{
-  width:50%;
-  text-align: center;
-  margin-left: 1px;
+  font-size: 20px;
+  justify-content: center;
 }

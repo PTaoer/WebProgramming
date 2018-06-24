@@ -1,3 +1,2 @@
 <!--pages/user/send.wxml-->
-<view class="container">
-</view>
+<text class="nullText">😭 暂时还没有喔~</text>

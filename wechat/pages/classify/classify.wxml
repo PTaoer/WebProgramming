@@ -1,15 +1,18 @@
-
 <view class="container">
   <view class="nav_left">
-    <block wx:for="{{cateItems}}">
+    <block wx:for="{{cateItems}}" >
       <view class="nav_left_items {{curNav == item.cate_id ? 'active' : ''}}" >
- {{item.cate_name}}<view class="iconfont {{item.icon}} icon  " bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.cate_id}}"></view></view>
+        {{item.cate_name}}
+        <view class="iconfont {{item.icon}} icon  " bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.cate_id}}"></view>
+      </view>
     </block>
   </view>
 
   <view class="nav_right">
     <view wx:if="{{cateItems[curIndex].ishaveChild}}" style="text-align:center">
-    <view class="nav_right_title">{{cateItems[curIndex].title}}  <view class="straLine"></view></view>
+      <view class="nav_right_title">{{cateItems[curIndex].title}}
+        <view class="straLine"></view>
+      </view>
       <block wx:for="{{cateItems[curIndex].children}}">
         <view class="nav_right_items">
           <navigator url="{{item.url}}">

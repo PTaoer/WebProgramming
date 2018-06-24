@@ -15,8 +15,7 @@
     </view>
     <view class="bottom">
       <view class="b1" bindtap='nopay'>
-        <view class='reddot'>1</view>
-        <text class="iconfont icon-pay" style="font-size:30px;margin-top:-15px;margin-bottom:4px;"></text>
+        <text class="iconfont icon-pay" style="font-size:30px;margin-top:5px;height:50px;line-height:60px;"></text>
         <text>待付款</text>
       </view>
       <view class="b1" bindtap='send'>
@@ -27,33 +26,26 @@
         <text class="iconfont icon-daishouhuo" style="font-size:30px;margin-top:5px;height:50px;line-height:60px;"></text>
         <text>已发货</text>
       </view>
-      <view class="b1" bindtap='noevaluate'>
+      <view class="b4" bindtap='noevaluate'>
         <text class="iconfont icon-pingjia" style="font-size:30px;margin-top:5px;height:50px;line-height:60px;"></text>
         <text>待评价</text>
       </view>
     </view>
   </view>
   <view class="information">
-    <view class="i" style="border-bottom:1px solid #ccc" bindtap='address'>
+    <view class="i" bindtap='address'>
       <text class="iconfont icon-dizhiguanli"></text>
-      <text>地址管理</text>
-      <text class="i1">></text>
-    </view>
-    <view class="i" bindtap='ticket'>
-      <text class="iconfont icon-coupons"></text>
-      <text>优惠券</text>
+      <text style='margin-left: 30rpx;'>地址管理</text>
       <text class="i1">></text>
     </view>
   </view>
-  <view class="custom" bindtap='service'>
+  <view class="custom">
     <text class="iconfont icon-kefu" style="margin-left:8px"></text>
-    <text> 客服</text>
+    <button open-type='contact' class='servincebutton'>客服</button>
     <text class="i1">></text>
   </view>
 
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
-
-
 </view>

@@ -1,10 +1,15 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/classify/classify",
     "pages/shopping/shopping",
+    "pages/orderDetail/order",
     "pages/my/my",
     "pages/logs/logs",
+
+    "pages/Address/chooseAddre/chooseAddre",
+    "pages/Address/newAddre/newAddre",
+    "pages/Address/modifyAddre/modifyAddre",
 
     "pages/display/display-danhuangsu/display",
     "pages/display/display-bingqilin/display",
@@ -35,20 +40,17 @@
     "pages/user/address/newAddre/newAddre",
     "pages/user/address/modifyAddre/modifyAddre",
     "pages/user/service/service",
-    "pages/user/ticket/ticket",
 
     "pages/null/null",
     "pages/search/search",
-    "pages/comment/comment",
-    "template/template"
+    "pages/comment/comment"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "零拾实验室",
-    "navigationBarTextStyle":"black",
+    "navigationBarTextStyle": "black",
     "enablePullDownRefresh": true
-
   },
   "tabBar": {
     "color": "#000000",
@@ -80,7 +82,4 @@
       }
     ]
   }
-
 }
-
-

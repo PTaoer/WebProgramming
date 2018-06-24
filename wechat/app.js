@@ -39,6 +39,23 @@ App({
     NLPAppSecret: "",
     NLPUrl: "https://cn.olami.ai/cloudservice/api",
     NLPCusid: "",
-    slikToCharUrl: "https://api.happycxz.com/test/silk2asr/olami/asr"
+    slikToCharUrl: "https://api.happycxz.com/test/silk2asr/olami/asr",
+    list: [],
+    address: [{
+      name: "yeye",
+      tel: '15990184827',
+      addre: '杭州市余杭区',
+      door: '301',
+      select: "circle",
+     // index: 0
+    },
+      {
+        name: "caicai",
+        tel: '13587656789',
+        addre: '杭州市余杭区',
+        door: '杭师大仓前校区',
+        select: "circle",
+      }
+    ]
   }
 })

@@ -1,23 +1,2 @@
 <!--pages/user/order/order.wxml-->
-<view class="container">
-  <view class='t'>
-    <image src='http://47.100.44.255/images/product/detail-luoshifen/01.JPG'></image>
-    <view class='v' bindtap='o1'>
-      <view class='v-t'>广西螺狮粉300g*6包</view>
-      <view class='v-b'>
-        <view class='v-b-1'>单价：34.90元</view> 
-        <view class='v-b-1'>数量：1袋</view>
-      </view>
-    </view>
-  </view>
-  <view class='t' bindtap='o2'>
-    <image src='http://47.100.44.255/images/product/detail-niunai/01.JPG'></image>
-    <view class='v'>
-      <view class='v-t'>光明纯牛奶</view>
-      <view class='v-b'>
-        <view class='v-b-1'>单价：49.90元</view> 
-        <view class='v-b-1'>数量：1箱</view>
-      </view>
-    </view>
-  </view>
-</view>
+<text class="nullText">😭 暂时还没有喔~</text>

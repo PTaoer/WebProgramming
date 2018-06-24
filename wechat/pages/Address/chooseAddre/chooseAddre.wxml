@@ -1,0 +1,16 @@
+<view class="item" bindtap="address" wx:for="{{list}}" wx:key="list" data-index="{{item.index}}" data-id="{{item.id}}" data-name="{{item.name}}" data-tel="{{item.tel}}" data-addre="{{item.addre}}" data-image="{{item.image}}" data-addrevalue="{{item.addrevalue}}" data-door="{{item.door}}">
+  <icon type="{{item.select}}" size="26" data-index="{{index}}" data-select="{{item.select}}" bindtap="choose" style='margin-right:15rpx;' />
+  <view class="info">
+    <text>{{item.name}}，{{item.tel}}</text>
+    <text>地址：{{item.addre}}{{item.door}}</text>
+  </view>
+  <view class="modify" bindtap="toModifyAddre" data-index="{{item.index}}" data-id="{{item.id}}" data-name="{{item.name}}" data-tel="{{item.tel}}" data-addre="{{item.addre}}" data-image="{{item.image}}" data-addrevalue="{{item.addrevalue}}" data-door="{{item.door}}"
+    data-select="{{item.select}}">
+    <image src="../../../images/address/modify.png" mode="widthFix" />
+  </view>
+</view>
+
+<view class="add" bindtap="addAddre">
+  <image class="left" src="../../../images/address/add.png" mode="widthFix" />
+  <view class="text">新增个人地址</view>
+</view>

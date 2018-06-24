@@ -21,15 +21,33 @@ Page({
     // 使用data数据对象设置样式名
     minusStatus: 'disabled'
   },
+  onLoad: function (options) {
+    flag = options.flag;
+    console.log("..." + flag)
+    if (!flag) {
+      this.setData({
+        display1: "flex",
+        display2: "none",
+      })
+
+    } else {
+      this.setData({
+        display1: "none",
+        display2: "flex",
+        addre: options.address
+      })
+    }
+  },
+
+  toChooseAddre: function () {
+    wx.redirectTo({
+      url: '../../Address/chooseAddre/chooseAddre?myurl=' + '../../display/display-danhuangsu/display'
+    });
+  },
   //事件处理函数
   bindCommentTap: function() {
     wx.navigateTo({
       url: '../../comment/comment'
-    })
-  },
-  bindAddressTap: function () {
-    wx.navigateTo({
-      url: '../../user/address/chooseAddre/chooseAddre'
     })
   },
   //收藏
@@ -38,7 +56,7 @@ Page({
       isLike: !this.data.isLike
     });
     wx.showToast({
-      title: '喜欢哦',
+      title: this.data.isLike ? "喜欢哦" : "取消",
       icon: 'success',
       duration: 3000,
       mask: false,  //是否显示透明蒙层，防止触摸穿透，默认：false  
@@ -54,10 +72,26 @@ Page({
     })
   },
   //跳到购物车
+  justToCar() {
+    wx.switchTab({
+      url: '../../shopping/shopping'
+    })
+  },
   toCar() {
     wx.switchTab({
       url: '../../shopping/shopping'
     })
+    var num = this.data.num;
+    var cargo = {
+      code: '0017',
+      num: num,
+      name: '香菇豆干小包装麻辣',
+      url: 'http://47.100.44.255/images/product/detail-xianggan/01.JPG',
+      price: '19.80',
+      select: 'circle'
+    };
+    var app = getApp();
+    app.globalData.list.push(cargo);
   },
   showModal: function () {
     // 显示遮罩层
@@ -136,23 +170,21 @@ Page({
     });
   },
   bindSubmitNum: function (e) {
+    var num = this.data.num;
     wx.showToast({
       title: '购物车',
       icon: 'success',
       duration: 3000
     });
-    wx.request({
-      url: "http://119.29.18.249:8080/postcart",
-      data: {
-        pro_id: 17,
-        num: num
-      },
-      header: {
-        'content-type': 'application/json'
-      },
-      success: function (res) {
-        console.log(res.data);
-      },
-    })
+    var cargo = {
+      code: '0017',
+      num: num,
+      name: '香菇豆干小包装麻辣',
+      url: 'http://47.100.44.255/images/product/detail-xianggan/01.JPG',
+      price: '19.80',
+      select: 'circle'
+    };
+    var app = getApp();
+    app.globalData.list.push(cargo);
   }
 })

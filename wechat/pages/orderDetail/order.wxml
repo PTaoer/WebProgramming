@@ -1,0 +1,47 @@
+<view class="ars-box" bindtap='toChooseAddress'>
+  <view class="row">
+    <view class="iconfont icon-icon_address "></view>
+    <view>
+      <view class="row">
+        <view class="ars-name">{{address.name}}</view>
+        <text class="ars-phone">{{address.tel}}</text>
+      </view>
+      <view class="ars-address">{{address.addre}}{{address.door}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="goods-box">
+  <view class="goods-wrap">
+    <view class="row" style="border-bottom:1px solid rgb(242, 242, 242)">
+      <view class="iconfont icon-lingshi"></view>
+      <view class="labName">零拾实验室</view>
+    </view>
+    <view class="row" wx:for="{{prolist}}" style='border-bottom: 2rpx solid rgb(242, 242, 242)'>
+      <image src="{{item.url}}" class="goods-img" mode="widthFix" style="width:30%"></image>
+      <view class="goods-info" style="width:70%">
+        <view class="goods-name">{{item.name}}</view>
+        <view class="row" style='display: flex; width:100%;'>
+          <view class="goods-price">￥{{item.price}}</view>
+          <view class='hidden'></view>
+          <view class="goods-num">* {{item.num}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='buttom'>
+  <view class="goods-sumP">
+    <view class="row">
+      <view>商品总额</view>
+      <view class="hidden"></view>
+      <view class="goods-sum">￥{{total}}</view>
+    </view>
+  </view>
+  <view class='btmbtn'>
+    <button bindtap='topay' class="paybtn">去支付</button>
+    <button bindtap='todelete' class="deletebtn">取消</button>
+
+  </view>
+</view>

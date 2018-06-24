@@ -84,15 +84,5 @@ Page({
     wx.navigateTo({
       url: '../user/address/chooseAddre/chooseAddre'
     })
-  },
-  service: function () {
-    wx.navigateTo({
-      url: '../user/service/service'
-    })
-  },
-  ticket: function () {
-    wx.navigateTo({
-      url: '../user/ticket/ticket'
-    })
   }
 })

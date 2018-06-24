@@ -41,14 +41,26 @@
   </view>
 </view>
 
-<view class='address'>
-  <view class='moveto left size80 family'>送至</view>
-  <icon class='iconfont icon-dizhiguanli left' style='color: rgb(255, 98, 0); padding-bottom: 15rpx;'></icon>
-  <view class='left20 size80 family province'>浙江省</view>
-  <view class='left20 size80 family city'>杭州市</view>
-  <view class='left20 size80 family block'>余杭区</view>
-  <view class='hidden'></view>
-  <icon class='iconfont icon-pingjia' style='color: rgb(163, 163, 163); padding-right:30rpx;' bindtap='bindAddressTap'></icon>
+<view class="address" style="display:{{display1}} ">
+  <view class="left1">
+    <text class='moveto left size80 family'>送至</text>
+    <icon class="iconfont icon-dizhiguanli left" style='color: rgb(255, 98, 0); padding-bottom: 15rpx;'></icon>
+    <text class='size80 family'>　选择您的地址</text>
+  </view>
+  <view class="right">
+    <icon class='iconfont icon-pingjia' style='color: rgb(163, 163, 163); padding-right:30rpx;' bindtap="toChooseAddre"></icon>
+  </view>
+</view>
+
+<view class="address" bindtap="toChooseAddre" style="display:{{display2}} ">
+  <view class="left1">
+    <text class='moveto left size80 family'>送至</text>
+    <icon class="iconfont icon-dizhiguanli left" style='color: rgb(255, 98, 0); padding-bottom: 15rpx;'></icon>
+    <text class='size80 family'>　{{addre}}</text>
+  </view>
+  <view class="right">
+    <icon class='iconfont icon-pingjia' style='color: rgb(163, 163, 163); padding-right:30rpx;' bindtap='bindAddressTap'></icon>
+  </view>
 </view>
 <view class='comment'>
   <view class='comment-title left family'>商品评价（391）</view>
@@ -63,11 +75,13 @@
 </view>
 <!-- 底部悬浮栏 -->
 <view class="display-nav">
-  <image bindtap="chatting" src="/../../images/displaytool/talk.png" />
+  <button open-type='contact' class='cs_button'>
+    <image src="http://47.100.44.255/images/displaytool/talk.png" />
+  </button>
   <view class="line_nav"></view>
-  <image bindtap="addLike" src="{{isLike?'/../../images/displaytool/like.png':'/../../images/displaytool/donotlike.png'}}" />
+  <image bindtap="addLike" src="{{isLike?'http://47.100.44.255/images/displaytool/like.png':'http://47.100.44.255/images/displaytool/donotlike.png'}}" />
   <view class="line_nav"></view>
-  <image bindtap="toCar" src="/../../images/displaytool/shoppingcar.png" />
+  <image bindtap="justToCar" src="http://47.100.44.255/images/displaytool/shoppingcar.png" />
   <button class="button-tocar" bindtap="showModal" formType="submit">加入购物车</button>
 </view>
 
@@ -89,6 +103,6 @@
   </view>
   <view class='bottom'>
     <button class="button-tocar" formType="submit" style='background:rgb(76, 175, 80); height: 80%; margin-top: 5%;' bindtap="bindSubmitNum">加入购物车</button>
-    <button class="imme_buy" formType="submit" style='background:rgb(244, 67, 54); height: 80%; margin-top: 5%;' bindtap="toCar">立即购买</button>
+    <button class="button-tocar" formType="submit" style='background:rgb(244, 67, 54); height: 80%; margin-top: 5%; color: white;' bindtap="toCar">立即购买</button>
   </view>
 </view>

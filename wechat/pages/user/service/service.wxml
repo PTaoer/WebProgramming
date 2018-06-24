@@ -1,3 +1,2 @@
-<import src="../../../modules/chat-input/chat-input.wxml" />
 <button open-type='contact' class='service'>联系客服</button>
-<template is="chat-input" data="{{inputObj:inputObj,textMessage:textMessage,showVoicePart:true}}" />
+
