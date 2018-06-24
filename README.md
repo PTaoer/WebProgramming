@@ -66,3 +66,7 @@ Web程序设计大作业
 点击商品详情页的收藏按钮，即可收藏喜爱的商品，再次点击即可取消收藏。<br>
 9.取消订单功能<br>
 点击订单详情页的取消订单按钮即可删除订单。<br>
+
+体验版二维码：
+----
+![](https://github.com/PTaoer/WebProgramming/raw/master/doc/readme/体验版.jpg)<br>
